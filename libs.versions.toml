@@ -17,13 +17,14 @@ ksp = "2.1.10-1.0.31"
 firebaseBom = "33.13.0"
 firebaseCrashlyticsPlugin = "3.0.3"
 firebasePerfPlugin = "1.4.2"
+jacoco = "0.8.12"
 junit = "4.13.2"
 kotlin = "2.1.20"
 kotlinx-coroutines = "1.10.1"
 ktor = "3.1.0"
 kotlinx-serialization = "1.8.1"
 koin-bom = "4.0.3"
-androidx-datastore = "1.1.5"
+androidx-datastore = "1.1.4"
 material-icons-extended = "1.7.8"
 xmlutil = "0.91.0"
 jetpack-navigation = "2.8.0-alpha10"
@@ -38,6 +39,7 @@ androidxLintGradle = "1.0.0-alpha04"
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-compose-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "compose-multiplatform" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
 androidx-test-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-junit" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-espresso-core" }
