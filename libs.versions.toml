@@ -12,6 +12,7 @@ androidx-espresso-core = "3.6.1"
 androidx-lifecycle = "2.8.4"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
+build-konfig = "0.17.1"
 compose-multiplatform = "1.7.3"
 gmsPlugin = "4.4.2"
 ksp = "2.1.10-1.0.31"
@@ -92,8 +93,10 @@ firebase-performance-gradlePlugin = { group = "com.google.firebase", name = "per
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
+buildKonfig-gradlePlugin = { group = "com.codingfeline.buildkonfig", name = "buildkonfig-gradle-plugin", version.ref = "build-konfig" }
 
 [plugins]
+buildKonfig = { id = "com.codingfeline.buildkonfig", version.ref = "build-konfig" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 android-lint = { id = "com.android.lint", version.ref = "agp" }
