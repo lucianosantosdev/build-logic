@@ -1,32 +1,41 @@
 [versions]
-agp = "8.12.0"
-androidTools = "31.12.0"
+agp = "8.12.1"
+androidTools = "31.12.1"
+androidx-credentials = "1.5.0"
 android-compileSdk = "36"
 android-wear-compileSdk = "36"
 android-minSdk = "26"
 androidx-activityCompose = "1.10.1"
 androidx-appcompat = "1.7.1"
 androidx-constraintlayout = "2.2.1"
-androidx-core-ktx = "1.16.0"
+googleid = "1.1.1"
+androidx-core-ktx = "1.17.0"
 androidx-espresso-core = "3.7.0"
-androidx-lifecycle = "2.9.1"
+androidx-lifecycle = "2.9.2"
+logback-classic = "1.5.18"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.3.0"
+libphonenumber = "9.0.12"
 activity-compose = "1.10.1"
+aws = "2.81.0"
+places = "4.4.1"
+desugar-jdk-libs = "2.1.5"
 build-konfig = "0.17.1"
-compose-bom = "2025.07.00"
+compose-bom = "2025.08.00"
 compose-navigation = "2.9.3"
 espresso = "3.7.0"
 coil = "3.3.0"
+firebase-ui = "9.0.0"
 gmsPlugin = "4.4.3"
 ksp = "2.2.0-2.0.2"
-firebaseBom = "34.0.0"
-firebaseCrashlyticsPlugin = "3.0.5"
-firebasePerfPlugin = "2.0.0"
+facebook = "18.1.3"
+firebaseBom = "34.1.0"
+firebaseCrashlyticsPlugin = "3.0.6"
+firebasePerfPlugin = "2.0.1"
 jacoco = "0.8.12"
 junit = "4.13.2"
 junit-ext = "1.3.0"
-kotlin = "2.2.0"
+kotlin = "2.2.10"
 kotlinx-coroutines = "1.10.2"
 ktor = "3.2.3"
 kotlinx-serialization = "1.9.0"
@@ -34,20 +43,20 @@ koin-bom = "4.1.0"
 androidx-datastore = "1.1.7"
 material-icons-extended = "1.7.8"
 korio = "4.0.3"
-mockitoCore = "5.18.0"
+mockitoCore = "5.19.0"
 mockitoKotlin = "6.0.0"
 xmlutil = "0.91.2"
 jetpack-navigation = "2.8.0-alpha13"
 core-splashscreen = "1.0.1"
-skiko = "0.9.21"
+skiko = "0.9.22"
 app-update = "2.1.0"
 room = "2.7.2"
 truth = "1.4.4"
 androidxLintGradle = "1.0.0-alpha05"
-composeHotReload = "1.0.0-beta04"
+composeHotReload = "1.0.0-beta05"
 coroutinesTest = "1.10.2"
 androidx-arch-core = "2.2.0"
-wear-compose = "1.5.0-rc01"
+wear-compose = "1.5.0-rc02"
 navigation = "2.9.3"
 wear-ongoing = "1.0.0"
 compose-plugin = "1.8.2"
@@ -55,8 +64,11 @@ revenuecat = "9.2.0"
 google-ads = "24.5.0"
 billing = "8.0.0"
 media = "1.1.0"
+mlkit = "16.1.7"
+kmpauth = "2.3.0-beta01"
 
 [libraries]
+facebook-sdk = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebook" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -89,8 +101,13 @@ ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "kto
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
 ktor-client-websockets = { module = "io.ktor:ktor-client-websockets", version.ref = "ktor" }
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
 ktor-network = { module = "io.ktor:ktor-network", version.ref = "ktor" }
 ktor-network-tls = { module = "io.ktor:ktor-network-tls", version.ref = "ktor" }
+ktor-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback-classic" }
+places = { group = "com.google.android.libraries.places", name = "places", version.ref = "places" }
+
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
 koin-core = { module = "io.insert-koin:koin-core" }
@@ -99,7 +116,12 @@ firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 firebase-cloud-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
+firebase-storage = { module = "com.google.firebase:firebase-storage" }
 firebase-performance = { group = "com.google.firebase", name = "firebase-perf" }
+firebase-auth = { module = "com.google.firebase:firebase-auth-ktx" }
+firebase-ui-auth = { module = "com.firebaseui:firebase-ui-auth", version.ref = "firebase-ui" }
+
 koin-android = { module = "io.insert-koin:koin-android" }
 koin-compose = { module = "io.insert-koin:koin-compose" }
 koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel" }
@@ -119,8 +141,29 @@ truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
 mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
 billing-ktx = { module = "com.android.billingclient:billing-ktx", version.ref = "billing" }
-androidx-media = { group = "androidx.media", name = "media", version.ref = "media" }
+kmpauth-google = { module = "io.github.mirzemehdi:kmpauth-google", version.ref = "kmpauth" }
+kmpauth-uihelper = { module = "io.github.mirzemehdi:kmpauth-uihelper", version.ref = "kmpauth" }
 
+androidx-media = { group = "androidx.media", name = "media", version.ref = "media" }
+mlkit-faceDetection = { module = "com.google.mlkit:face-detection", version.ref = "mlkit" }
+google-libphonenumber = { module = "com.googlecode.libphonenumber:libphonenumber", version.ref = "libphonenumber" }
+androidx-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "androidx-credentials" }
+androidx-credentials-play-services = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "androidx-credentials" }
+googleid = { module = "com.google.android.libraries.identity.googleid:googleid", version.ref = "googleid" }
+desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar-jdk-libs" }
+
+#Room
+room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+
+#AWS
+aws-s3 = { module = "com.amazonaws:aws-android-sdk-s3", version.ref = "aws" }
+aws-core = { module = "com.amazonaws:aws-android-sdk-core", version.ref = "aws" }
+aws-rekognition = { module = "com.amazonaws:aws-android-sdk-rekognition", version.ref = "aws" }
+aws-dynamodb = { module = "com.amazonaws:aws-android-sdk-ddb", version.ref = "aws" }
+aws-lambda = { module = "com.amazonaws:aws-android-sdk-lambda", version.ref = "aws" }
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
@@ -129,7 +172,6 @@ firebase-crashlytics-gradlePlugin = { group = "com.google.firebase", name = "fir
 firebase-performance-gradlePlugin = { group = "com.google.firebase", name = "perf-plugin", version.ref = "firebasePerfPlugin" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
-room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
 buildKonfig-gradlePlugin = { group = "com.codingfeline.buildkonfig", name = "buildkonfig-gradle-plugin", version.ref = "build-konfig" }
 
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
@@ -174,6 +216,8 @@ firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "
 firebase-perf = { id = "com.google.firebase.firebase-perf", version.ref = "firebasePerfPlugin" }
 googleServices = { id = "com.google.gms.google-services", version.ref = "gmsPlugin" }
 composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "composeHotReload" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+room = { id = "androidx.room", version.ref = "room" }
 
 # Plugins defined by this project
 nowinandroid-android-application = { id = "nowinandroid.android.application" }
