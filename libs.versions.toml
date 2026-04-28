@@ -1,5 +1,7 @@
 [versions]
 agp = "8.12.1"
+roborazzi = "1.60.0"
+robolectric = "4.16"
 androidTools = "31.12.1"
 androidx-credentials = "1.5.0"
 android-compileSdk = "36"
@@ -58,6 +60,8 @@ androidx-arch-core = "2.2.0"
 wear-compose = "1.5.0-rc02"
 navigation = "2.9.3"
 wear-ongoing = "1.0.0"
+wear = "1.3.0"
+health-services-client = "1.1.0-alpha03"
 compose-plugin = "1.8.2"
 revenuecat = "9.3.0"
 google-ads = "24.5.0"
@@ -182,6 +186,15 @@ navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.
 
 wear-compose-tooling-preview = { group = "androidx.wear.compose", name = "compose-ui-tooling" }
 wear-ongoing = { group = "androidx.wear", name = "wear-ongoing", version.ref = "wear-ongoing" }
+wear = { group = "androidx.wear", name = "wear", version.ref = "wear" }
+health-services-client = { group = "androidx.health", name = "health-services-client", version.ref = "health-services-client" }
+
+roborazzi = { module = "io.github.takahirom.roborazzi:roborazzi", version.ref = "roborazzi" }
+roborazzi-compose = { module = "io.github.takahirom.roborazzi:roborazzi-compose", version.ref = "roborazzi" }
+roborazzi-junit-rule = { module = "io.github.takahirom.roborazzi:roborazzi-junit-rule", version.ref = "roborazzi" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 
 revenuecat = { module = "com.revenuecat.purchases:purchases", version.ref = "revenuecat" }
 revenuecat-ui = { module = "com.revenuecat.purchases:purchases-ui", version.ref = "revenuecat" }
@@ -201,6 +214,7 @@ compose-navigation = { group = "org.jetbrains.androidx.navigation", name = "navi
 
 [plugins]
 buildKonfig = { id = "com.codingfeline.buildkonfig", version.ref = "build-konfig" }
+roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
