@@ -3,6 +3,7 @@ agp = "8.13.2"
 androidTools = "32.0.0"
 roborazzi = "1.60.0"
 robolectric = "4.16"
+store-screenshots = "1.0.1"
 androidx-credentials = "1.5.0"
 android-compileSdk = "36"
 android-minSdk = "26"
@@ -215,6 +216,7 @@ compose-navigation = { group = "org.jetbrains.androidx.navigation", name = "navi
 [plugins]
 buildKonfig = { id = "com.codingfeline.buildkonfig", version.ref = "build-konfig" }
 roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
+storeScreenshots = { id = "io.github.lucianosantosdev.storescreenshots", version.ref = "store-screenshots" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
