@@ -63,6 +63,7 @@ wear-compose = "1.6.1"
 navigation = "2.9.7"
 wear-ongoing = "1.1.0"
 wear = "1.3.0"
+play-services-wearable = "18.2.0"
 health-services-client = "1.1.0-alpha03"
 compose-plugin = "1.11.1"
 revenuecat = "9.22.1"
@@ -192,6 +193,7 @@ navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.
 wear-compose-tooling-preview = { group = "androidx.wear.compose", name = "compose-ui-tooling" }
 wear-ongoing = { group = "androidx.wear", name = "wear-ongoing", version.ref = "wear-ongoing" }
 wear = { group = "androidx.wear", name = "wear", version.ref = "wear" }
+play-services-wearable = { group = "com.google.android.gms", name = "play-services-wearable", version.ref = "play-services-wearable" }
 health-services-client = { group = "androidx.health", name = "health-services-client", version.ref = "health-services-client" }
 
 roborazzi = { module = "io.github.takahirom.roborazzi:roborazzi", version.ref = "roborazzi" }
