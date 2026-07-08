@@ -185,6 +185,7 @@ buildKonfig-gradlePlugin = { group = "com.codingfeline.buildkonfig", name = "bui
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 # wear
 wear-compose-material = { group = "androidx.wear.compose", name = "compose-material", version.ref = "wear-compose" }
+wear-compose-material3 = { group = "androidx.wear.compose", name = "compose-material3", version.ref = "wear-compose" }
 compose-material-icons-core = { group = "androidx.compose.material", name = "material-icons-core", version.ref = "wear-compose" }
 wear-compose-foundation = { group = "androidx.wear.compose", name = "compose-foundation", version.ref = "wear-compose" }
 wear-compose-navigation = { group = "androidx.wear.compose", name = "compose-navigation", version.ref = "wear-compose" }
