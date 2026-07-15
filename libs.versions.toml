@@ -69,6 +69,9 @@ health-services-client = "1.1.0-alpha03"
 compose-plugin = "1.11.1"
 revenuecat = "9.22.1"
 google-ads = "25.0.0"
+# KMP AdMob wrapper: lets the banner live in the shared Compose tree instead of
+# a per-platform view. Still needs the native SDK linked on each platform.
+lexilabs-basic-ads = "1.2.0"
 billing = "8.3.0"
 media = "1.7.1"
 mlkit = "16.1.7"
@@ -210,6 +213,7 @@ compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 revenuecat = { module = "com.revenuecat.purchases:purchases", version.ref = "revenuecat" }
 revenuecat-ui = { module = "com.revenuecat.purchases:purchases-ui", version.ref = "revenuecat" }
 google-ads = { group = "com.google.android.gms", name = "play-services-ads", version.ref = "google-ads" }
+lexilabs-basic-ads = { group = "app.lexilabs.basic", name = "basic-ads", version.ref = "lexilabs-basic-ads" }
 
 # Compose
 compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
