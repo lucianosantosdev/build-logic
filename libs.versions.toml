@@ -54,6 +54,10 @@ mockitoCore = "5.21.0"
 mockitoKotlin = "6.2.3"
 xmlutil = "0.91.3"
 jetpack-navigation = "2.9.2"
+# Navigation 3. The runtime is AndroidX's own multiplatform artifact (Google Maven,
+# ships iosArm64/iosSimulatorArm64 klibs); the UI half is JetBrains' Compose
+# Multiplatform build of it, which depends on the same runtime version.
+navigation3 = "1.1.1"
 core-splashscreen = "1.2.0"
 skiko = "0.9.41"
 app-update = "2.1.0"
@@ -233,6 +237,8 @@ compose-material-icons-extended = { module = "androidx.compose.material:material
 compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
 androidx-compose-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest"}
 compose-navigation = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref = "jetpack-navigation" }
+navigation3-runtime = { group = "androidx.navigation3", name = "navigation3-runtime", version.ref = "navigation3" }
+navigation3-ui = { group = "org.jetbrains.androidx.navigation3", name = "navigation3-ui", version.ref = "navigation3" }
 
 [plugins]
 skie = { id = "co.touchlab.skie", version.ref = "skie" }
