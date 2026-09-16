@@ -80,7 +80,14 @@ compose-plugin = "1.11.1"
 # The Kotlin Multiplatform SDK, not the Android-native one: subscriptions are shared
 # by :mobile and the iOS app. 3.x builds against purchases-ios through a Gradle-managed
 # cinterop, so Xcode needs no RevenueCat package of its own.
-revenuecat = "3.2.1"
+revenuecat = "3.8.0"
+# The Android SDK purchases-kmp actually renders the dashboard paywall with, pinned ahead
+# of the 10.20.0 that purchases-kmp 3.8.0 drags in. 10.21.1 carries "read visibility for
+# Button component": before it, a `Hide layer` rule aimed at a Button component is read
+# but never applied, so a paywall told to hide its "Continue FREE" exit draws it anyway
+# while `Show layer` on the same component works. Drop this override once a purchases-kmp
+# release pins 10.21.1 or newer.
+purchases-android = "10.21.1"
 google-ads = "25.0.0"
 # KMP AdMob wrapper: lets the banner live in the shared Compose tree instead of
 # a per-platform view. Still needs the native SDK linked on each platform.
@@ -233,6 +240,8 @@ compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 
 revenuecat = { module = "com.revenuecat.purchases:purchases-kmp-core", version.ref = "revenuecat" }
 revenuecat-ui = { module = "com.revenuecat.purchases:purchases-kmp-ui", version.ref = "revenuecat" }
+revenuecat-android = { module = "com.revenuecat.purchases:purchases", version.ref = "purchases-android" }
+revenuecat-android-ui = { module = "com.revenuecat.purchases:purchases-ui", version.ref = "purchases-android" }
 google-ads = { group = "com.google.android.gms", name = "play-services-ads", version.ref = "google-ads" }
 lexilabs-basic-ads = { group = "app.lexilabs.basic", name = "basic-ads", version.ref = "lexilabs-basic-ads" }
 
