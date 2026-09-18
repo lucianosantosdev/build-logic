@@ -7,7 +7,17 @@ store-screenshots = "1.5.7"
 androidx-credentials = "1.5.0"
 android-compileSdk = "36"
 android-minSdk = "26"
-androidx-activityCompose = "1.13.0"
+# Held at 1.12.x deliberately. activity 1.13.0 carries a dependency on
+# androidx.core 1.18.0, and core 1.18.0 added an unconditional loop
+# (WindowInsetsCompat.Impl20.initTypeBoundingRectsMaps) that asks the platform for
+# every inset type up to Type.SYSTEM_OVERLAYS. On API 34 that routes through
+# TypeImpl34, which calls WindowInsets.Type.systemOverlays() — a method the android-34
+# SDK has but the framework on early Android 14 builds does not. Result: every read of
+# root window insets (Scaffold's first composition, so app launch) dies with
+# NoSuchMethodError on those devices. Seen in production on 337-348, 100% Android 14.
+# core 1.17.0 has no such loop, and activity 1.12.x lets it resolve there.
+# Revisit when androidx.core guards that call; 1.19.0 still does not.
+androidx-activityCompose = "1.12.4"
 androidx-appcompat = "1.7.1"
 androidx-constraintlayout = "2.2.1"
 googleid = "1.2.0"
@@ -18,7 +28,7 @@ logback-classic = "1.5.27"
 androidx-material = "1.13.0"
 androidx-test-junit = "1.3.0"
 libphonenumber = "9.0.23"
-activity-compose = "1.13.0"
+activity-compose = "1.12.4"  # see androidx-activityCompose above
 aws = "2.81.1"
 places = "5.1.1"
 desugar-jdk-libs = "2.1.5"
@@ -75,7 +85,7 @@ wear = "1.3.0"
 wear-tiles = "1.4.1"
 wear-protolayout = "1.2.1"
 play-services-wearable = "18.2.0"
-health-services-client = "1.1.0-alpha03"
+health-services-client = "1.1.0-rc02"
 compose-plugin = "1.11.1"
 # The Kotlin Multiplatform SDK, not the Android-native one: subscriptions are shared
 # by :mobile and the iOS app. 3.x builds against purchases-ios through a Gradle-managed
