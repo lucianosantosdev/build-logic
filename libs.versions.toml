@@ -105,7 +105,19 @@ lexilabs-basic-ads = "1.2.0"
 billing = "8.3.0"
 media = "1.7.1"
 mlkit = "16.1.7"
+# Google / Apple sign-in for Kotlin Multiplatform.
+#
+# Held at 2.x, and not for inertia. kmpauth 3.0.6 publishes its Android artifacts with
+# minCompileSdk=37 and pulls androidx.core 1.19.0 — and core 1.18.0+ is exactly what this
+# project pins away from (see androidx-activityCompose above: an unconditional
+# systemOverlays() lookup that dies with NoSuchMethodError on early Android 14 builds,
+# seen in production on 337-348). Taking kmpauth 3 means taking that crash back.
+# Revisit when kmpauth publishes against a core release that guards the call.
 kmpauth = "2.3.1"
+# The Firebase SDK the KMP world actually has: kmpauth-firebase binds to it, and it is
+# what a signed-in user unwraps to. 2.7.0 is the newest of the 2.x line kmpauth 2.3.1
+# builds against (it asks for 2.1.0; Gradle resolves upward within the major).
+gitlive-firebase = "2.7.0"
 
 [libraries]
 compose-dnd = { module = "com.mohamedrejeb.dnd:compose-dnd", version.ref = "compose-dnd" }
@@ -186,7 +198,12 @@ mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore
 mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
 billing-ktx = { module = "com.android.billingclient:billing-ktx", version.ref = "billing" }
 kmpauth-google = { module = "io.github.mirzemehdi:kmpauth-google", version.ref = "kmpauth" }
+kmpauth-firebase = { module = "io.github.mirzemehdi:kmpauth-firebase", version.ref = "kmpauth" }
 kmpauth-uihelper = { module = "io.github.mirzemehdi:kmpauth-uihelper", version.ref = "kmpauth" }
+gitlive-firebase-analytics = { module = "dev.gitlive:firebase-analytics", version.ref = "gitlive-firebase" }
+gitlive-firebase-auth = { module = "dev.gitlive:firebase-auth", version.ref = "gitlive-firebase" }
+gitlive-firebase-firestore = { module = "dev.gitlive:firebase-firestore", version.ref = "gitlive-firebase" }
+gitlive-firebase-storage = { module = "dev.gitlive:firebase-storage", version.ref = "gitlive-firebase" }
 
 androidx-media = { group = "androidx.media", name = "media", version.ref = "media" }
 mlkit-faceDetection = { module = "com.google.mlkit:face-detection", version.ref = "mlkit" }
