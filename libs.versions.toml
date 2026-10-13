@@ -123,6 +123,9 @@ kmpauth = "2.3.1"
 # what a signed-in user unwraps to. 2.7.0 is the newest of the 2.x line kmpauth 2.3.1
 # builds against (it asks for 2.1.0; Gradle resolves upward within the major).
 gitlive-firebase = "2.7.0"
+# Hands Kotlin crashes on iOS to Crashlytics with their Kotlin stack. Without it an uncaught
+# Kotlin exception reaches Crashlytics as a bare SIGABRT with no message and no Kotlin frames.
+crashkios = "0.10.0"
 
 [libraries]
 compose-dnd = { module = "com.mohamedrejeb.dnd:compose-dnd", version.ref = "compose-dnd" }
@@ -209,6 +212,7 @@ gitlive-firebase-analytics = { module = "dev.gitlive:firebase-analytics", versio
 gitlive-firebase-auth = { module = "dev.gitlive:firebase-auth", version.ref = "gitlive-firebase" }
 gitlive-firebase-firestore = { module = "dev.gitlive:firebase-firestore", version.ref = "gitlive-firebase" }
 gitlive-firebase-storage = { module = "dev.gitlive:firebase-storage", version.ref = "gitlive-firebase" }
+crashkios-crashlytics = { module = "co.touchlab.crashkios:crashlytics", version.ref = "crashkios" }
 
 androidx-media = { group = "androidx.media", name = "media", version.ref = "media" }
 mlkit-faceDetection = { module = "com.google.mlkit:face-detection", version.ref = "mlkit" }
