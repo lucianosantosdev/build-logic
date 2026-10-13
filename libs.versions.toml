@@ -1,5 +1,10 @@
 [versions]
 agp = "9.2.1"
+# Pinned so release bundles always carry native debug symbols. Unpinned, AGP looks for its
+# default NDK, which the CI runner does not have: the strip/extract step then packages the
+# .so files as they are and Play warns "contains native code, and you've not uploaded
+# debug symbols". build.yml installs exactly this version before building.
+ndk = "29.0.14206865"
 androidTools = "32.2.1"
 roborazzi = "1.60.0"
 robolectric = "4.16.1"
