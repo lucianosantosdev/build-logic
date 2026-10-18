@@ -92,6 +92,7 @@ wear-tiles = "1.4.1"
 wear-protolayout = "1.2.1"
 play-services-wearable = "18.2.0"
 health-services-client = "1.1.0-rc02"
+health-connect-client = "1.1.0"
 compose-plugin = "1.11.1"
 # The Kotlin Multiplatform SDK, not the Android-native one: subscriptions are shared
 # by :mobile and the iOS app. 3.x builds against purchases-ios through a Gradle-managed
@@ -264,6 +265,7 @@ wear-protolayout-material = { group = "androidx.wear.protolayout", name = "proto
 wear-protolayout-expression = { group = "androidx.wear.protolayout", name = "protolayout-expression", version.ref = "wear-protolayout" }
 play-services-wearable = { group = "com.google.android.gms", name = "play-services-wearable", version.ref = "play-services-wearable" }
 health-services-client = { group = "androidx.health", name = "health-services-client", version.ref = "health-services-client" }
+health-connect-client = { group = "androidx.health.connect", name = "connect-client", version.ref = "health-connect-client" }
 
 roborazzi = { module = "io.github.takahirom.roborazzi:roborazzi", version.ref = "roborazzi" }
 roborazzi-compose = { module = "io.github.takahirom.roborazzi:roborazzi-compose", version.ref = "roborazzi" }
