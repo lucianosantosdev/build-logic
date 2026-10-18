@@ -278,6 +278,10 @@ revenuecat = { module = "com.revenuecat.purchases:purchases-kmp-core", version.r
 revenuecat-ui = { module = "com.revenuecat.purchases:purchases-kmp-ui", version.ref = "revenuecat" }
 revenuecat-android = { module = "com.revenuecat.purchases:purchases", version.ref = "purchases-android" }
 revenuecat-android-ui = { module = "com.revenuecat.purchases:purchases-ui", version.ref = "purchases-android" }
+# RevenueCat's AdMob adapter: loads AdMob ads through the tracker so impressions, clicks and
+# impression-level revenue reach RevenueCat beside subscription revenue. It is built in
+# lockstep with purchases-android and its POM pins that exact version, so it shares the ref.
+revenuecat-admob = { module = "com.revenuecat.purchases:purchases-admob", version.ref = "purchases-android" }
 google-ads = { group = "com.google.android.gms", name = "play-services-ads", version.ref = "google-ads" }
 lexilabs-basic-ads = { group = "app.lexilabs.basic", name = "basic-ads", version.ref = "lexilabs-basic-ads" }
 
