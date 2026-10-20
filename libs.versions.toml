@@ -128,6 +128,9 @@ gitlive-firebase = "2.7.0"
 # Hands Kotlin crashes on iOS to Crashlytics with their Kotlin stack. Without it an uncaught
 # Kotlin exception reaches Crashlytics as a bare SIGABRT with no message and no Kotlin frames.
 crashkios = "0.10.0"
+# QR encoding for the watch's share-timer screen: the watch has no share sheet, so the
+# link is drawn as a code the phone's camera scans. Core only — no Android views.
+zxing = "3.5.3"
 
 [libraries]
 compose-dnd = { module = "com.mohamedrejeb.dnd:compose-dnd", version.ref = "compose-dnd" }
@@ -302,6 +305,7 @@ androidx-compose-test-manifest = { group = "androidx.compose.ui", name = "ui-tes
 compose-navigation = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref = "jetpack-navigation" }
 navigation3-runtime = { group = "androidx.navigation3", name = "navigation3-runtime", version.ref = "navigation3" }
 navigation3-ui = { group = "org.jetbrains.androidx.navigation3", name = "navigation3-ui", version.ref = "navigation3" }
+zxing-core = { group = "com.google.zxing", name = "core", version.ref = "zxing" }
 
 [plugins]
 skie = { id = "co.touchlab.skie", version.ref = "skie" }
