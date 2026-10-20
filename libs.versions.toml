@@ -60,6 +60,7 @@ skie = "0.10.13"
 kotlinx-coroutines = "1.11.0"
 ktor = "3.5.1"
 kotlinx-serialization = "1.11.0"
+kotlinx-datetime = "0.7.1"
 koin-bom = "4.2.2"
 androidx-datastore = "1.2.1"
 material-icons-extended = "1.7.8"
@@ -91,6 +92,7 @@ wear-tiles = "1.4.1"
 wear-protolayout = "1.2.1"
 play-services-wearable = "18.2.0"
 health-services-client = "1.1.0-rc02"
+health-connect-client = "1.1.0"
 compose-plugin = "1.11.1"
 # The Kotlin Multiplatform SDK, not the Android-native one: subscriptions are shared
 # by :mobile and the iOS app. 3.x builds against purchases-ios through a Gradle-managed
@@ -127,6 +129,9 @@ gitlive-firebase = "2.7.0"
 # Hands Kotlin crashes on iOS to Crashlytics with their Kotlin stack. Without it an uncaught
 # Kotlin exception reaches Crashlytics as a bare SIGABRT with no message and no Kotlin frames.
 crashkios = "0.10.0"
+# QR encoding for the watch's share-timer screen: the watch has no share sheet, so the
+# link is drawn as a code the phone's camera scans. Core only — no Android views.
+zxing = "3.5.3"
 
 [libraries]
 compose-dnd = { module = "com.mohamedrejeb.dnd:compose-dnd", version.ref = "compose-dnd" }
@@ -159,6 +164,7 @@ coil-mp = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
 coil-test = { module = "io.coil-kt.coil3:coil-test", version.ref = "coil" }
 storescreenshots-library = { module = "io.github.lucianosantosdev:storescreenshots-library", version.ref = "store-screenshots" }
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinx-datetime" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
@@ -263,6 +269,7 @@ wear-protolayout-material = { group = "androidx.wear.protolayout", name = "proto
 wear-protolayout-expression = { group = "androidx.wear.protolayout", name = "protolayout-expression", version.ref = "wear-protolayout" }
 play-services-wearable = { group = "com.google.android.gms", name = "play-services-wearable", version.ref = "play-services-wearable" }
 health-services-client = { group = "androidx.health", name = "health-services-client", version.ref = "health-services-client" }
+health-connect-client = { group = "androidx.health.connect", name = "connect-client", version.ref = "health-connect-client" }
 
 roborazzi = { module = "io.github.takahirom.roborazzi:roborazzi", version.ref = "roborazzi" }
 roborazzi-compose = { module = "io.github.takahirom.roborazzi:roborazzi-compose", version.ref = "roborazzi" }
@@ -299,6 +306,7 @@ androidx-compose-test-manifest = { group = "androidx.compose.ui", name = "ui-tes
 compose-navigation = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref = "jetpack-navigation" }
 navigation3-runtime = { group = "androidx.navigation3", name = "navigation3-runtime", version.ref = "navigation3" }
 navigation3-ui = { group = "org.jetbrains.androidx.navigation3", name = "navigation3-ui", version.ref = "navigation3" }
+zxing-core = { group = "com.google.zxing", name = "core", version.ref = "zxing" }
 
 [plugins]
 skie = { id = "co.touchlab.skie", version.ref = "skie" }
