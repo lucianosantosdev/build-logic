@@ -195,6 +195,11 @@ firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
 firebase-storage = { module = "com.google.firebase:firebase-storage" }
 firebase-performance = { group = "com.google.firebase", name = "firebase-perf" }
 firebase-auth = { module = "com.google.firebase:firebase-auth-ktx" }
+# App Check: proves to the backend that a call comes from a genuine install. Play Integrity
+# in release builds; the debug provider (debug builds only) prints a token to register in
+# the Firebase console instead, since a sideloaded debug build never passes Play Integrity.
+firebase-appcheck-playintegrity = { module = "com.google.firebase:firebase-appcheck-playintegrity" }
+firebase-appcheck-debug = { module = "com.google.firebase:firebase-appcheck-debug" }
 firebase-ui-auth = { module = "com.firebaseui:firebase-ui-auth", version.ref = "firebase-ui" }
 
 koin-android = { module = "io.insert-koin:koin-android" }
@@ -223,6 +228,7 @@ gitlive-firebase-analytics = { module = "dev.gitlive:firebase-analytics", versio
 gitlive-firebase-auth = { module = "dev.gitlive:firebase-auth", version.ref = "gitlive-firebase" }
 gitlive-firebase-firestore = { module = "dev.gitlive:firebase-firestore", version.ref = "gitlive-firebase" }
 gitlive-firebase-storage = { module = "dev.gitlive:firebase-storage", version.ref = "gitlive-firebase" }
+gitlive-firebase-functions = { module = "dev.gitlive:firebase-functions", version.ref = "gitlive-firebase" }
 crashkios-crashlytics = { module = "co.touchlab.crashkios:crashlytics", version.ref = "crashkios" }
 
 androidx-media = { group = "androidx.media", name = "media", version.ref = "media" }
