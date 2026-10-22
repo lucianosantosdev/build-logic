@@ -229,6 +229,7 @@ gitlive-firebase-auth = { module = "dev.gitlive:firebase-auth", version.ref = "g
 gitlive-firebase-firestore = { module = "dev.gitlive:firebase-firestore", version.ref = "gitlive-firebase" }
 gitlive-firebase-storage = { module = "dev.gitlive:firebase-storage", version.ref = "gitlive-firebase" }
 gitlive-firebase-functions = { module = "dev.gitlive:firebase-functions", version.ref = "gitlive-firebase" }
+gitlive-firebase-config = { module = "dev.gitlive:firebase-config", version.ref = "gitlive-firebase" }
 crashkios-crashlytics = { module = "co.touchlab.crashkios:crashlytics", version.ref = "crashkios" }
 
 androidx-media = { group = "androidx.media", name = "media", version.ref = "media" }
