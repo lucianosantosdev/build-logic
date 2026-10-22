@@ -126,6 +126,9 @@ kmpauth = "2.3.1"
 # what a signed-in user unwraps to. 2.7.0 is the newest of the 2.x line kmpauth 2.3.1
 # builds against (it asks for 2.1.0; Gradle resolves upward within the major).
 gitlive-firebase = "2.7.0"
+# Confetti on the finish screen. Held at 0.8.0: 0.9.0 publishes with minCompileSdk=37,
+# the same step kmpauth 3 asks for and the core pin above avoids.
+confettikit = "0.8.0"
 # Hands Kotlin crashes on iOS to Crashlytics with their Kotlin stack. Without it an uncaught
 # Kotlin exception reaches Crashlytics as a bare SIGABRT with no message and no Kotlin frames.
 crashkios = "0.10.0"
@@ -230,6 +233,7 @@ gitlive-firebase-firestore = { module = "dev.gitlive:firebase-firestore", versio
 gitlive-firebase-storage = { module = "dev.gitlive:firebase-storage", version.ref = "gitlive-firebase" }
 gitlive-firebase-functions = { module = "dev.gitlive:firebase-functions", version.ref = "gitlive-firebase" }
 gitlive-firebase-config = { module = "dev.gitlive:firebase-config", version.ref = "gitlive-firebase" }
+confettikit = { module = "io.github.vinceglb:confettikit", version.ref = "confettikit" }
 crashkios-crashlytics = { module = "co.touchlab.crashkios:crashlytics", version.ref = "crashkios" }
 
 androidx-media = { group = "androidx.media", name = "media", version.ref = "media" }
