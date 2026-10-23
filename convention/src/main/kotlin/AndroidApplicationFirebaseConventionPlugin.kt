@@ -41,11 +41,12 @@ class AndroidApplicationFirebaseConventionPlugin : Plugin<Project> {
 
             extensions.configure<ApplicationExtension> {
                 buildTypes.configureEach {
-                    // Disable the Crashlytics mapping file upload. This feature should only be
-                    // enabled if a Firebase backend is available and configured in
-                    // google-services.json.
+                    // Upload the R8 mapping so Crashlytics can deobfuscate release stack traces.
+                    // It only runs for minified variants, and needs nothing beyond the Firebase
+                    // app in google-services.json. With it off, every Android crash arrives as
+                    // `mv5.a`-style frames and has to be retraced by rebuilding the exact commit.
                     configure<CrashlyticsExtension> {
-                        mappingFileUploadEnabled = false
+                        mappingFileUploadEnabled = true
                     }
                 }
             }
