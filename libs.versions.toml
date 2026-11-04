@@ -108,6 +108,9 @@ revenuecat = "3.14.0"
 # fixed `Hide layer` rules on Button components in dashboard paywalls.)
 purchases-android = "10.27.0"
 google-ads = "25.0.0"
+# Google's consent form. play-services-ads 25.0.0 already resolves this version at runtime;
+# :mobile names it to compile against it, so keep the two in step.
+google-ump = "4.0.0"
 # KMP AdMob wrapper: lets the banner live in the shared Compose tree instead of
 # a per-platform view. Still needs the native SDK linked on each platform.
 lexilabs-basic-ads = "1.2.0"
@@ -308,6 +311,7 @@ revenuecat-android-ui = { module = "com.revenuecat.purchases:purchases-ui", vers
 # lockstep with purchases-android and its POM pins that exact version, so it shares the ref.
 revenuecat-admob = { module = "com.revenuecat.purchases:purchases-admob", version.ref = "purchases-android" }
 google-ads = { group = "com.google.android.gms", name = "play-services-ads", version.ref = "google-ads" }
+google-ump = { group = "com.google.android.ump", name = "user-messaging-platform", version.ref = "google-ump" }
 lexilabs-basic-ads = { group = "app.lexilabs.basic", name = "basic-ads", version.ref = "lexilabs-basic-ads" }
 
 # Compose
